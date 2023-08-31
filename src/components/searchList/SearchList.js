@@ -17,7 +17,7 @@ const SearchList = ({text, clientRef}) => {
     const friendsList2 = useSelector(state => state.user.friends2);
 
     useEffect(() => {
-        fetch('http://localhost:8080/user/findPeople', {
+        fetch('http://quhan.site/api/user/findPeople', {
             headers: {
                 'Authorization': `Bearer ${window.localStorage.getItem('jwt-token')}`,
                 'Content-Type': 'application/json'

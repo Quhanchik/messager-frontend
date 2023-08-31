@@ -39,7 +39,7 @@ const App = () => {
     if(!isExpired()) {
       return;
     }
-    fetch(`http://localhost:8080/user/${window.localStorage.getItem('id')}`, {
+    fetch(`http://quhan.site/api/user/${window.localStorage.getItem('id')}`, {
         headers: {
             'Authorization': `Bearer ${window.localStorage.getItem('jwt-token')}`
         },

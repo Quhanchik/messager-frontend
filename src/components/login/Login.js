@@ -15,7 +15,7 @@ const Login = () => {
         e.preventDefault();
         console.log('test');
 
-        fetch('http://localhost:8080/auth/login', {
+        fetch('http://quhan.site/api/auth/login', {
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -32,7 +32,7 @@ const Login = () => {
                     window.localStorage.setItem('jwt-token', data.jwt);
                     window.localStorage.setItem('id', data.user.id);
 
-                    window.location.href = 'http://localhost:3000/';
+                    window.location.href = 'http://quhan.site/';
                 })
             }
         })

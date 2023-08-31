@@ -25,7 +25,7 @@ const MainPage = () => {
             const sock = new SockJS('http://localhost:8080/ws');
             clientRef.current = over(sock);
             clientRef.current.connect({}, () => {
-                fetch(`http://localhost:8080/message/getMessagesSubs/${window.localStorage.getItem('id')}`, {
+                fetch(`http://quhan.site/api/message/getMessagesSubs/${window.localStorage.getItem('id')}`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${window.localStorage.getItem('jwt-token')}`
@@ -40,7 +40,7 @@ const MainPage = () => {
                     })
                 })
 
-                fetch(`http://localhost:8080/message/getViewsSubs/${window.localStorage.getItem('id')}`, {
+                fetch(`http://quhan.site/api/message/getViewsSubs/${window.localStorage.getItem('id')}`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${window.localStorage.getItem('jwt-token')}`

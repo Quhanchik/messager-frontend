@@ -72,7 +72,7 @@ const Messages = ({clientRef}) => {
 
             const block = document.querySelector('.messages');
             setMessagesLoaded(false);
-                    setTimeout( () => fetch('http://localhost:8080/message/pagination', {
+                    setTimeout( () => fetch('http://quhan.site/api/message/pagination', {
                         method: "POST",
                         body: JSON.stringify({
                             chatId: activeChat.value,
@@ -143,7 +143,7 @@ const Messages = ({clientRef}) => {
         entries.forEach((entry) => {
             if(entry.isIntersecting) {
                 const currPage = user.chats.find(elem => elem.id == activeChat)
-                fetch('http://localhost:8080/message/pagination', {
+                fetch('http://quhan.site/api/message/pagination', {
                     method: "POST",
                     body: JSON.stringify({
                         chatId: activeChat.value,

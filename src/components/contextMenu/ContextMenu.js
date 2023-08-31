@@ -26,7 +26,7 @@ const ContextMenu = ({x, y, views, setIsContextMenu, msgId}) => {
 
     const deleteMsg = () => {
         console.log(msgId);
-        fetch(`http://localhost:8080/message/${msgId}`, {
+        fetch(`http://quhan.site/api/message/${msgId}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${window.localStorage.getItem('jwt-token')}`
