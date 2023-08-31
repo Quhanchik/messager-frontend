@@ -6,6 +6,7 @@ import pen from '../../icons/pen.svg';
 import trash from '../../icons/trash.svg';
 import { useDispatch } from 'react-redux';
 import { deleteMessage } from '../../slices/userSlice';
+import React from 'react';
 
 const ContextMenu = ({x, y, views, setIsContextMenu, msgId}) => {
 

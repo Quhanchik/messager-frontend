@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useReactMediaRecorder } from "react-media-recorder";
+import React from 'react';
 
 import mic from '../../icons/mic.svg';
 

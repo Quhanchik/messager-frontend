@@ -9,6 +9,7 @@ import NewGroup from '../newGroup/NewGroup';
 import SockJsClient from 'react-stomp';
 import { addChat } from '../../slices/userSlice';
 import back from '../../icons/back.svg'
+import React from 'react';
 
 const LeftBar = ({clientRef}) => {
     const [isOpen, setIsOpen] = useState(false);

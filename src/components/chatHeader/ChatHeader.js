@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import searchIcon from '../../icons/search.svg';
 import moreIcon from '../../icons/more.svg';
 import './ChatHeader.scss';
+import React from 'react';
 
 const ChatHeader = () => {
     const chats = useSelector(state => state.user.chats);

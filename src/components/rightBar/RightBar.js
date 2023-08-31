@@ -5,6 +5,7 @@ import './RightBar.scss';
 import { useEffect } from "react";
 import { useSubscription } from "react-stomp-hooks";
 import { addMessage } from "../../slices/userSlice";
+import React from 'react';
 
 const RightBar = ({clientRef}) => {
     const activeChat = useSelector(state => state.activeChat);

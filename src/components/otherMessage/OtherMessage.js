@@ -3,6 +3,7 @@ import group from '../../icons/group.svg';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 import { useSelector } from 'react-redux';
 import play from '../../icons/play.png'
+import React from 'react';
 
 const OtherMessage = (props) => {
     const {msg, clientRef} = props;

@@ -1,5 +1,6 @@
 import emptyChatIllustration from '../../icons/emptyChat.svg';
 import './EmptyChatError.scss';
+import React from 'react';
 
 const EmptyChatError = () => {
     return (

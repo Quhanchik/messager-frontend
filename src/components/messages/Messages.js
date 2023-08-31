@@ -5,6 +5,7 @@ import './Messages.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMessages, addMessage, appendMessages } from '../../slices/userSlice';
 import EmptyChatError from '../emptyChatError/EmptyChatError';
+import React from 'react';
 
 import SockJS from 'sockjs-client';
 import Stomp, { client } from 'stompjs';

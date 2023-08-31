@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import './FriendList.scss';
 import userPlus from '../../icons/user-plus.png';
+import React from 'react';
 
 const FriendList = () => {
     const user = useSelector(state => state.user);

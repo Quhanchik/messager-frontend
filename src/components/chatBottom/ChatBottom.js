@@ -2,6 +2,7 @@ import './ChatBottom.scss';
 
 import paperclipper from '../../icons/paperclip.svg';
 import smile from '../../icons/smile.svg';
+import React from 'react';
 
 import SockJS from 'sockjs-client';
 import Stomp, { over } from 'stompjs';

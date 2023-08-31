@@ -6,6 +6,7 @@ import Stomp, { client, over } from 'stompjs';
 import { addChat, addFriendAndDeleteResponse, addFriendRequest, addFriendResponse, addMessage, deleteFriendRequestOrResponse, setSub, setView } from "../../../slices/userSlice";
 import SockJsClient from 'react-stomp';
 import SockJS from "sockjs-client";
+import React from 'react';
 
 import './MainPage.scss';
 import { set } from "../../../slices/clientSlice";

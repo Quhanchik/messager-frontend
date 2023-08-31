@@ -7,6 +7,7 @@ import userSend from '../../icons/user-send.png';
 import userX from '../../icons/user-x.png'
 import group from '../../icons/group.svg';
 import { useSelector } from "react-redux";
+import React from 'react';
 
 const SearchList = ({text, clientRef}) => {
     const [people, setPeople] = useState([]);

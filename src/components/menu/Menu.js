@@ -2,6 +2,7 @@ import './Menu.scss';
 import user from '../../icons/user.png';
 import group from '../../icons/group.svg';
 import userPlus from '../../icons/user-plus.png';
+import React from 'react';
 
 const Menu = ({setIsFriendOpen, setIsOpen, setIsNewGroup, setIsChatList, setIsSearch}) => {
     return(

@@ -10,6 +10,7 @@ import ChatHeader from '../chatHeader/ChatHeader';
 import ChatBottom from '../chatBottom/ChatBottom';
 import SockJsClient from 'react-stomp';
 import { addMessage } from '../../slices/userSlice';
+import React from 'react';
 
 const Chat = ({clientRef}) => {
     // const sock = new SockJS('http://localhost:8080/ws');

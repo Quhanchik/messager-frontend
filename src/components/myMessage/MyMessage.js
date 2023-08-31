@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import ContextMenu from '../contextMenu/ContextMenu';
 import { Buffer } from "buffer";
 import play from '../../icons/play.png'
+import React from 'react';
 
 const MyMessage = (props) => {
     const {msg, setX, setY, setIsContextMenu, setViews, setMsgId, lastMsgIdRef} = props;

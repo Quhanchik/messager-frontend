@@ -1,5 +1,6 @@
 import { useRef } from "react"
-import { useCallback } from "react"
+import { useCallback } from "react";
+import React from 'react';
 
 const useIntersectionObserver = (options, cb) => {
     const observer = useRef(null)

@@ -3,6 +3,7 @@ import './ChatList.scss';
 import { useState } from "react";
 import { set } from "../../slices/activeChatSlice";
 import SockJsClient from 'react-stomp';
+import React from 'react';
 
 const ChatList = () => {
     const user = useSelector(state => state.user);

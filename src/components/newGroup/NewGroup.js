@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import './NewGroup.scss';
 import { useState } from "react";
+import React from 'react';
 
 const NewGroup = ({clientRef,setIsNewGroup}) => {
     const user= useSelector(state => state.user)

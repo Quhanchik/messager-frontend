@@ -2,6 +2,7 @@
 import { useReactMediaRecorder } from 'react-media-recorder';
 import camera from '../../icons/camera.svg';
 import { useEffect } from 'react';
+import React from 'react';
 
 const VideoRecorder = ({clientRef, activeChat}) => {
     const { status, startRecording, stopRecording, mediaBlobUrl } =

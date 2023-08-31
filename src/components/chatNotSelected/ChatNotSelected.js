@@ -1,5 +1,5 @@
 import illustration from '../../img/chatNotSelected.svg';
-
+import React from 'react';
 import './ChatNotSelected.scss';
 
 const ChatNotSelected = () => {
