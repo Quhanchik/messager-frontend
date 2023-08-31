@@ -1,0 +1,56 @@
+.chatBottom {
+    height: 64px;
+    background-color: #44474d;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    min-width: 600px;
+    &_fileForm {
+        position: relative;
+        margin: 0 10px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &_file {
+        font-size: 0px;
+    }
+    &_file::-webkit-file-upload-button {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        cursor: pointer;
+        // z-index: 10;
+        height: 30px;
+        width: 30px;
+    }
+    &_paperclipper {
+        position: absolute;
+        cursor: pointer;
+    }
+    &_icon {
+        height: 24px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    &_form {
+        width: 86%;
+        margin: 0 10px;
+    }
+    &_input {
+        border-radius: 6px;
+        height: 28px;
+        padding: 0 10px;
+        font-size: 14px;
+        outline: none;
+        border: none;
+        width: 100%;
+    }
+    &_hold {
+        filter: invert(100%);
+    }
+}

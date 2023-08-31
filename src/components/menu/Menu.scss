@@ -1,0 +1,23 @@
+.menu {
+    position: absolute;
+    color: #fff;
+    background-color: #2c2c2c;
+    margin-top: 15px;
+    border: solid 1px #2a2a2a;
+    padding: 0 10px;
+    border-radius: 8px;
+    z-index: 5;
+    &_item {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    &_img {
+        height: 26px;
+    }
+    &_title {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+}

@@ -1,0 +1,133 @@
+.myMessage {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin: 2px 0;
+    &_textWrapper {
+        max-width: 400px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+    &_image {
+        max-height: 500px;
+        max-width: 500px;
+        margin: 10px 0 4px 0;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+    }
+    &_fileBubble {
+        position: relative;
+        background-color: #7b7b7b;
+        max-width: 500px;
+        border-radius: 8px;
+        padding: 5px 10px;
+        min-width: 100px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+    &_videoWrapper {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+    }
+    &_videoBubble {
+        position: relative;
+        background-color: transparent;
+        max-width: 500px;
+        border-radius: 8px;
+        padding: 5px 10px;
+        min-width: 100px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+    &_fileTextWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_bubble {
+        background-color: #7b7b7b;
+        max-width: 500px;
+        border-radius: 8px;
+        padding: 5px 10px;
+        min-width: 100px;
+        display: inline-flex;
+        position: relative;
+    }
+    &_text {
+        font-size: 14px;
+        font-weight: 300;
+        color: #fff;
+        overflow-wrap: break-word;
+        margin-right: 10px;
+        max-width: 460px;
+    }
+    &_sender {
+        font-size: 16px;
+        font-weight: 500;
+        overflow-wrap: break-word;
+        color: #000;
+    }
+    &_metaWrapper {
+        display: inline-flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+    &_audioMetaWrapper {
+        position: absolute;
+        bottom: 0;
+        right: 5px;
+    }
+    &_audio {
+        height: 40px;
+        border-radius: 0%;
+        box-shadow: none;
+        margin-bottom: 10px;
+        &::-webkit-media-controls-panel {
+            background-color: #7b7b7b;
+        }
+        &::-webkit-media-controls-enclosure {
+            border-radius: 0;
+        }
+    }
+    &_video {
+        height: 400px;
+        width: 400px;
+        cursor: pointer;
+    }
+    &_playIcon {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        filter: invert(100%);
+        mix-blend-mode: difference;
+        cursor: pointer;
+    }
+    &_avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        margin-left: 10px;
+    }
+    &_fileMetaWrapper {
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+    }
+    &_sentTime {
+        color: #000;
+        font-size: 14px;
+    }
+    &_check {
+        height: 18px;
+    }
+}
+
+.hiddenPlay {
+    display: none;
+}

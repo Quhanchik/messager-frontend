@@ -1,25 +1,75 @@
-import logo from './logo.svg';
+import { Navigate, Outlet, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
 import './App.css';
 
-function App() {
+import { useCallback, useRef, useState } from 'react';
+import { set } from './slices/userSlice';
+import Login from './components/login/Login';
+import Register from './components/register/Register';
+import MainPage from './components/pages/mainPage/MainPage';
+import { useEffect } from 'react';
+import SockJS from 'sockjs-client';
+import Stomp, { client } from 'stompjs';
+import SockJsClient from 'react-stomp';
+import { useDispatch, useSelector } from 'react-redux';
+import { addMessage } from './slices/userSlice';
+
+const App = () => {
+
+  const dispatch = useDispatch();
+  // const activeChat = useSelector(state => state.activeChat);
+  // const user = useSelector(state => state.user);
+
+  const parseJwt = (token) => {
+    try {
+      return JSON.parse(atob(token.split(".")[1]));
+    } catch (e) {
+      return null;
+    }
+  };
+  
+  const isExpired = () => {
+    if(window.localStorage.getItem('jwt-token') === null) {
+      return false;
+    }
+    return parseJwt(window.localStorage.getItem('jwt-token')).exp * 1000 > Date.now();
+  }
+
+  useEffect(() => {
+    if(!isExpired()) {
+      return;
+    }
+    fetch(`http://localhost:8080/user/${window.localStorage.getItem('id')}`, {
+        headers: {
+            'Authorization': `Bearer ${window.localStorage.getItem('jwt-token')}`
+        },
+        method: "GET"
+    })
+    .then(res => res.json())
+    .then(data =>  dispatch(set(data)));
+  }, [dispatch]);
+
+
+  const AuthWrapper = () => {
+    return isExpired()
+      ? <Outlet /> 
+      : window.localStorage.getItem('jwt-token') !== null 
+      ? <Navigate to="/login" replace/> 
+      : <Navigate to="/register" replace/>;
+      
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route element={<AuthWrapper/>}>
+          <Route path="/" element={ <MainPage/>}/>
+        </Route>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;

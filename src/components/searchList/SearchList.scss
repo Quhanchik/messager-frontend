@@ -1,0 +1,40 @@
+.searchList {
+    &_wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &_icon {
+        height: 22px;
+        margin-left: 60%;
+        cursor: pointer;
+    }
+    &_icon1 {
+        height: 22px;
+        margin-left: 55%;
+        cursor: pointer;
+    }
+    &_icon2 {
+        height: 22px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    &_item {
+        margin: 5px 0;
+        padding: 5px 0;
+    }
+    &_img {
+        border-radius: 100%;
+        height: 35px;
+        margin-right: 20px;
+    }
+    &_fullname {
+        color: #fff;
+        font-size: 16px;
+    }
+    &_line {
+        height: 1px;
+        width: 100%;
+        margin-top: 5px;
+        background-color: rgba(44, 44, 44, 0.2);
+    }
+}

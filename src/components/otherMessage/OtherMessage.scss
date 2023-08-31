@@ -1,0 +1,72 @@
+.otherMessage {
+    display: flex;
+    justify-content: start;
+    margin: 2px 0;
+    &_textWrapper {
+        max-width: 400px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+    &_image {
+        max-height: 500px;
+        max-width: 500px;
+        margin: 10px 0 5px 0;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+    }
+    &_fileBubble {
+        position: relative;
+        background-color: #7b7b7b;
+        max-width: 500px;
+        border-radius: 8px;
+        padding: 5px 10px;
+        min-width: 100px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+    &_fileTextWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_bubble {
+        background-color: #7b7b7b;
+        max-width: 500px;
+        border-radius: 8px;
+        padding: 5px 10px;
+        min-width: 100px;
+        display: inline-flex;
+        position: relative;
+    }
+    &_text {
+        font-size: 14px;
+        font-weight: 300;
+        color: #fff;
+        overflow-wrap: break-word;
+        margin-right: 10px;
+        max-width: 460px;
+    }
+    &_sender {
+        font-size: 16px;
+        font-weight: 500;
+        overflow-wrap: break-word;
+        color: #000;
+    }
+    &_metaWrapper {
+        display: inline-flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+    &_fileMetaWrapper {
+        position: absolute;
+        bottom: 5px;
+        right: 15px;
+    }
+    &_sentTime {
+        color: #000;
+        font-size: 14px;
+    }
+    &_check {
+        height: 18px;
+    }
+}
